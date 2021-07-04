@@ -1,4 +1,4 @@
-package com.poly.myapp;
+package com.poly.myapp.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
