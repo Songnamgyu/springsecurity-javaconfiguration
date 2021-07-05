@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poly.myapp.model.dao.MemberMapper"> 
+
+<resultMap type="com.poly.myapp.model.dto.MemberDTO" id="MemberDTO">
+ <id property="no" column="MEMBER_NO"/>
+ <result property="name" column="MEMBER_NAME"/>
+ <result property="pwd" column="MEMBER_PWD"/>
+ <result property="email" column="EMAIL"/>
+ <result property="phone" column="PHONE" />
+ 
+</resultMap>
+<select id="selectMember" resultMap="MemberDTO">
+      SELECT
+              MEMBER_NO
+            , MEMBER_NAME
+            , MEMBER_PWD
+            , EMAIL
+            , PHONE 
+        FROM MEMBER     
+</select>	
+</mapper>

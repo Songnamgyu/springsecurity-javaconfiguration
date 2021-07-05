@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.song.test.model.dao.TimeMapper"> 
+
+<!-- DB접속을 확인하기위한 기본적인 시간 출력 메소드 -->
+<select id="getTime" resultType="String">
+       SELECT 
+              GETDATE()
+</select>     
+</mapper>
