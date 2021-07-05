@@ -12,6 +12,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.2.9.RELEASE</org.springframework-version>
+		<springsecurity.version>5.3.2.RELEASE</springsecurity.version>
 		<org.aspectj-version>1.9.6</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
 	</properties>
@@ -360,7 +361,7 @@
 
 		    <artifactId>spring-security-core</artifactId>
 
-		    <version>5.4.0</version>
+		    <version>${springsecurity.version}</version>
 
 		</dependency>
 
@@ -372,7 +373,7 @@
 
 		    <artifactId>spring-security-web</artifactId>
 
-		    <version>5.4.0</version>
+		    <version>${springsecurity.version}</version>
 
 		</dependency>
 
@@ -384,7 +385,7 @@
 
 		    <artifactId>spring-security-config</artifactId>
 
-		    <version>5.4.0</version>
+		    <version>${springsecurity.version}</version>
 
 		</dependency>
 
@@ -396,7 +397,7 @@
 
 		    <artifactId>spring-security-taglibs</artifactId>
 
-		    <version>5.4.0</version>
+		    <version>${springsecurity.version}</version>
 
 		</dependency>
 
