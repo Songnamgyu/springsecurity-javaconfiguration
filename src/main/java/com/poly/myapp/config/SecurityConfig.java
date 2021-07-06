@@ -36,16 +36,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .antMatchers("/member/**").hasRole("USER")
 	                .anyRequest().authenticated()
 	                .and()
-	                .formLogin();
+	                .formLogin()
+	                .and()
+	                .logout();
 	    }
 	  
-	    @Bean
-	    public PasswordEncoder encoder() {
-	        return new BCryptPasswordEncoder();
-	    }
-	    
-	    @Bean
-	    public PasswordEncoder passwordencoder() {
-	        return new NoOpPa();
-	    }
+//	    @Bean
+//	    public PasswordEncoder encoder() {
+//	        return new BCryptPasswordEncoder();
+//	    }
+	
 }
