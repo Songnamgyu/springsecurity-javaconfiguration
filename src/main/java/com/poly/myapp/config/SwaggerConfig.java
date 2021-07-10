@@ -51,7 +51,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.song.test.controller2"))
+				.apis(RequestHandlerSelectors.basePackage("com.poly.myapp"))
 				.paths(PathSelectors.any())
 				.build()
 				.groupName(verson);
