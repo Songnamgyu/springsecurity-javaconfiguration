@@ -24,8 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	  @Override
 	    public void configure(WebSecurity web) throws Exception {
+	      
 	        web.ignoring().antMatchers(
-	                "/webjars/**");
+	                "/v2/api-docs", "/swagger-resources/**",
+	                "/swagger-ui.html", "/webjars/**", "/swagger/**");
+	    
 	    }
 
 	  protected void configure(HttpSecurity http) throws Exception {
@@ -41,9 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .logout();
 	    }
 	  
-//	    @Bean
-//	    public PasswordEncoder encoder() {
-//	        return new BCryptPasswordEncoder();
-//	    }
+	    @Bean
+	    public PasswordEncoder encoder() {
+	        return new BCryptPasswordEncoder();
+	    }
 	
 }

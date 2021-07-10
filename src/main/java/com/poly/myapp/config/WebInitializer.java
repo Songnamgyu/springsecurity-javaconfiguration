@@ -12,13 +12,15 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] {ServletConfiguration.class};
+//		return new Class[] {ServletConfiguration.class};
+		return null;
+	
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] {ServletConfiguration.class , SecurityConfig.class};
+		return new Class[] {ServletConfiguration.class , SecurityConfig.class, SwaggerConfig.class};
 	}
 
 	@Override
@@ -35,28 +37,6 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
         return new Filter[] { characterEncodingFilter };
     }
-	
 
 	
-	
-	        //rest of your code   
-//	@Override
-//	public void onStartup(ServletContext servletContext) throws ServletException {
-//		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-//		context.setConfigLocation("com.poly.myapp.config");
-//		
-//		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("DispatcherServlet", new DispatcherServlet(context));
-//		dispatcher.setLoadOnStartup(1);
-//		dispatcher.addMapping("/");
-//		
-//		
-//		//인코딩필터적용
-//		FilterRegistration.Dynamic characterEncodingFilter = servletContext.addFilter("characterEncodingFilter", new CharacterEncodingFilter());
-//		characterEncodingFilter.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-//		characterEncodingFilter.setInitParameter("encoding", "UTF-8");
-//		characterEncodingFilter.setInitParameter("forceEncoding", "true");
-//
-//
-//	}
-//	
 }
